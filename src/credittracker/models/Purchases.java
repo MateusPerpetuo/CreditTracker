@@ -27,8 +27,6 @@ public class Purchases implements Comparable<Purchases> {
                 ", price $" + price;
     }
 
-
-
     @Override
     public int compareTo(Purchases purchases) {
         return Double.compare(this.price, purchases.getPrice());

@@ -1,12 +1,10 @@
 package credittracker.main;
-
 import credittracker.models.CreditCard;
 import credittracker.models.Purchases;
-
 import java.util.Collections;
 import java.util.Scanner;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
          Scanner scan = new Scanner(System.in);
 
@@ -29,16 +27,12 @@ public class main {
 
             if (purchaseSuccessfull) {
                 System.out.println("Compra realizada!");
-                toContinue();
-                exit = scan.nextInt();
-
             } else {
                 System.out.println("Saldo insuficiente!");
                 System.out.println("Seu limite atual é de $" + creditCard.getBalance());
-                toContinue();
-
-                exit = scan.nextInt();
             }
+            toContinue();
+            exit = scan.nextInt();
         }
 
         System.out.println("***************************");
@@ -61,11 +55,9 @@ public class main {
         System.out.println(""" 
                                         
                                         Deseja continar?
-                                        0 - sair 
+                                        0 - sair
                                         1 - continuar
                                         """);
 
     }
-
-
 }
